@@ -1,0 +1,149 @@
+{
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true,
+    "node": true
+  },
+  "rules": {
+    /**
+     * Require === except for null comparisons
+     * @see https://eslint.org/docs/rules/eqeqeq
+     */
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    /**
+     * Indent with 2 spaces (including switch cases)
+     * @see https://eslint.org/docs/rules/indent
+     */
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    /**
+     * Consistent spacing around keywords (if, else, etc.)
+     * @see https://eslint.org/docs/rules/keyword-spacing
+     */
+    "keyword-spacing": "error",
+    /**
+     * Enforce unix linebreaks
+     * @see https://eslint.org/docs/rules/linebreak-style
+     */
+    "linebreak-style": ["error", "unix"],
+    /**
+     * Disable console errors
+     * @see https://eslint.org/docs/rules/no-console
+     */
+    "no-console": "off",
+    /**
+     * Disallow duplicate import statements
+     * @see https://eslint.org/docs/rules/no-duplicate-imports
+     */
+    "no-duplicate-imports": "error",
+    /**
+     * Enforce max 1 empty line
+     * @see https://eslint.org/docs/rules/no-multiple-empty-lines
+     */
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    /**
+     * Disallow variables being explicitly initialized to undefined
+     * @see https://eslint.org/docs/rules/no-undef-init
+     */
+    "no-undef-init": "error",
+    /**
+     * Prevent the use of undefined
+     * @see https://eslint.org/docs/rules/no-undefined
+     */
+    "no-undefined": "error",
+    /**
+     * Disallow useless constructors
+     * @see https://eslint.org/docs/rules/no-useless-constructor
+     */
+    "no-useless-constructor": "error",
+    /**
+     * Disallow var
+     * @see https://eslint.org/docs/rules/no-var
+     */
+    "no-var": "error",
+    /**
+     * Prefer const over let
+     * Allow let to be used in destructuring when not all variables are reassigned
+     * Avoid conflicts with `no-use-before-define`
+     * @see https://eslint.org/docs/rules/prefer-const
+     */
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": true
+      }
+    ],
+    /**
+     * Use single quotes
+     * @see https://eslint.org/docs/rules/quotes
+     */
+    "quotes": ["error", "single"],
+    /**
+     * Require semicolons
+     * @see https://eslint.org/docs/rules/semi
+     */
+    "semi": ["error", "always"],
+    /**
+     * No spaces before semicolons
+     * @see https://eslint.org/docs/rules/semi-spacing
+     */
+    "semi-spacing": [
+      "warn",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    /**
+     * Enforce spaces before braces
+     * @see https://eslint.org/docs/rules/space-before-blocks
+     */
+    "space-before-blocks": "error",
+    /**
+     * Require spaces around non-unary operators (+, -, *, etc.)
+     * @see https://eslint.org/docs/rules/space-infix-ops
+     */
+    "space-infix-ops": "error",
+    /**
+     * Enforce spacing around unary operators (typeof, instanceof, ++, etc.)
+     * Word unary operators require spaces, non-word unary operators require no spaces
+     * @see https://eslint.org/docs/rules/space-unary-ops
+     */
+    "space-unary-ops": [
+      "error",
+      {
+        "words": true,
+        "nonwords": false
+      }
+    ],
+    /**
+     * Disallow yoda style comparisons
+     * @see https://eslint.org/docs/rules/yoda
+     */
+    "yoda": "error"
+  }
+}

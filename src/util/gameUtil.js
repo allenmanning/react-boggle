@@ -52,7 +52,7 @@ export const shuffleBoard = () => {
     'ooottu'
   ];
 
-  const board = [
+  let board = [
     ['', '', '', '', ''],
     ['', '', '', '', ''],
     ['', '', '', '', ''],
@@ -71,6 +71,13 @@ export const shuffleBoard = () => {
       board[row][col] = tileData;
     }
   }
+
+  board[0][0] = new TileData('c', 0, 0);
+  board[0][1] = new TileData('a', 0, 1);
+  board[0][2] = new TileData('t', 0, 2);
+  board[0][3] = new TileData('s', 0, 3);
+  // fixme
+
   return board;
 };
 
